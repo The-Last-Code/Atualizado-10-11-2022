@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (empty($_SESSION["login"])) {
+  header('location: LoginCadastro.php');
+  session_destroy();
+}
+
+?>
 <!DOCTYPE html>
 <!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
 <html lang="en" dir="ltr">

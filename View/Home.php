@@ -6,6 +6,7 @@
   }
 
 
+
   include('../Dao/Client.php');
   require_once('../Controllers/clientsController.php');
   require_once('../Conection/Conn.php');
@@ -17,7 +18,6 @@
   $controller->{$action}();
 
   $resultData = $_SESSION['var'];
-
 
 ?>
 
@@ -33,7 +33,6 @@
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/jpg" href="../View/img/logo.png" />
-
 </head>
 
 <body>
@@ -50,7 +49,7 @@
         </a>
       </li>
       <li>
-        <a href="FormularioPubli.php">
+        <a href="FomularioPubli.php">
           <i class='bx bx-edit-alt'></i>
           <span class="links_name">Criar Publicação</span>
         </a>
@@ -85,7 +84,7 @@
         <span class="dashboard">Perguntas</span>
       </div>
       <div class="search-box">
-        <input type="text" placeholder="Filtrar">
+        <input type="text" placeholder="Filtrar" id="searchbar">
         <i class='bx bx-search' style="background-color: #546CB3; color: rgb(255, 255, 255);"></i>
       </div>
 
@@ -112,10 +111,10 @@
     <div class="espaco-table">
 
     </div>
-        <?php while($data = $resultData->fetch(PDO::FETCH_ASSOC)){  ?>   
-        
-        <a href="#" class="teste-a" style="text-decoration: none;">
-        <table border="0">
+    <?php while($data = $resultData->fetch(PDO::FETCH_ASSOC)){  ?>   
+      <a href="Pub.php" class="btn-publicacao" style="text-decoration: none;">
+      <div id="resposta" class="box-resposta">
+        <table border="0" class="pub">
         <tr>
           <td class="info">
             <h3 style="text-decoration: none; color: #000000;"><?= $data['tit_projeto'] ?></h3>
@@ -130,10 +129,9 @@
           </td>
         </tr>
       </table>
+      </div>
     </a>
-
       <?php }?>
-
 
   </section>
 
@@ -181,6 +179,14 @@
 
 </html>
 
+<script>
+ $(document).ready(function(){
+   $("#resposta").find("input[type='hidden']").click(function(){
+    console.log($(this).attr("id"));
+   });
+});
+  
+</script>
 
 <script>
     let sidebar = document.querySelector(".sidebar");
@@ -210,7 +216,7 @@
   }
 </script>
 </main>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="./bootstrap/app/Views/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
 <script src="./bootstrap/app/Views/bootstrap/js/jquery-3.5.1.js"></script>

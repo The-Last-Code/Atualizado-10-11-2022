@@ -33,7 +33,7 @@
 <body>
   <div class="sidebar">
     <div class="logo-details">
-      <i class='bx bxl-c-plus-plus'></i>
+    <img src="./img/logopb.png">
       <span class="logo_name">SciLink</span>
     </div>
     <ul class="nav-links">
@@ -44,7 +44,7 @@
         </a>
       </li>
       <li>
-        <a href="FormularioPubli.php">
+        <a href="FomularioPubli.php">
           <i class='bx bx-edit-alt'></i>
           <span class="links_name">Criar Publicação</span>
         </a>
@@ -100,6 +100,10 @@
       </div>
     </nav>
 
+    <div class="espaco-table">
+
+    </div>
+
 
     <?php foreach ($resultData as $data) : ?>
     <table border="0">
@@ -143,7 +147,12 @@
         </td>
       </tr>
     </table>
+
     <?php endforeach; ?>
+
+    <div class="espaco-table">
+
+    </div>
   </section>
 
 

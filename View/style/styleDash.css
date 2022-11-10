@@ -49,11 +49,11 @@ nav
   border-radius: 8px;
   display: none;
   position: absolute;
-  background-color: #f5f5f5;
+  background-color: #f3f3f3;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-  height: 16vh;
+  
 }
 
 .teste
@@ -62,7 +62,6 @@ nav
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
   border-radius: 8px;
 }
 
@@ -70,39 +69,18 @@ nav
 {
   display: flex;
   align-items: center;
-  padding-top: 5%;
-  align-items: center;
   padding: 10px;
   width: 100%;
-  height: 100%;
+  gap: 0;
   text-decoration: none;
+  
+
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-.pub
-{
-  display: flex;
-  background: #F5F6FA;
-  border-radius: 6px;
-  height: 50px;
-  padding: 0 10px;
-  text-decoration: none;
-  color: #333;
-  border: 2px solid #EFEEF1;
-  transition: all 0.5s ease;
-}
-
-
-
-.pub:hover
-{
-  background: transparent;
-  box-shadow: 0 0px 1px rgba(0, 0, 0, 0.247);
-  border-radius: 8px;
-}
 
 .sidebar{
   position: fixed;
@@ -172,9 +150,7 @@ nav
   
   
 }
-.sidebar .nav-links li a.active{
-  background: #364573;
-}
+
 .sidebar .nav-links li a:hover{
   background: #364573;
 }
@@ -319,9 +295,11 @@ table:hover
   width: calc(100% - 240px);
   left: 240px;
   transition: all 0.5s ease;
-  background-color: #f5f5f5;
+  background-color: #f3f3f3;
+  height: 100vh;
   
 }
+
 
 .sidebar.active ~ .home-section{
   width: calc(100% - 60px);
