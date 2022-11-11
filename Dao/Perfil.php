@@ -19,11 +19,12 @@
         }
         
         function getAllCientista($id)
-        {
-            $sqlSelect = $this->pdo->query("SELECT * FROM cientista
-            INNER JOIN projeto ON cientista.id_cientista");
+        {   
+            $sqlSelect = $this->pdo->query("SELECT tit_projeto, dti_projeto, dtt_projeto, email_cientista, res_projeto, nom_cientista FROM projeto
+            JOIN cientista WHERE fk_id_cientista = $id AND id_cientista = $id");
             $resultQuery = $sqlSelect->fetchAll();
             return $resultQuery;
         }
     }
 ?>
+

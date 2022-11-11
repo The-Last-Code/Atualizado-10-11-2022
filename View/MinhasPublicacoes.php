@@ -106,7 +106,7 @@
 
 
     <?php foreach ($resultData as $data) : ?>
-    <table border="0">
+    <table border="0" class="tableMinhasPublicacoes">
       <tr>
         <td class="titulo">
           <h3><?= $data['tit_projeto'] ?></h3>
@@ -152,7 +152,8 @@
 
     <div class="espaco-table">
 
-    </div>
+</div>
+
   </section>
 
 

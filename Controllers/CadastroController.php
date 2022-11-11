@@ -45,13 +45,15 @@ class CadastroController{
       $nom_cientista = $_POST["cpf_cientista"];
       $snh_cientista = mb_strimwidth(md5(addslashes($_POST['snh_cientista'])), 0, 10);
       $log=new Login();
-      
          if($log->Login($nom_cientista,$snh_cientista)==true)
          {
            header('Location: ../View/Home.php');
          }
 
-           echo "<SCRIPT> //not showing me this alert('Senha ou CPF incorreto') window.location.replace('../../app/View/LoginCadastro.php'); </SCRIPT>";
+           echo "<SCRIPT> //not showing me this
+           alert('Senha ou CPF incorreto')
+           window.location.replace('../../app/View/LoginCadastro.php');
+           </SCRIPT>";
          
      }
   }
@@ -128,5 +130,3 @@ class CadastroController{
   }
 
 ?>
-
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

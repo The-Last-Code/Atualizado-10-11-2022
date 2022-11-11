@@ -1,7 +1,8 @@
 <?php
 
 require_once '../Conection/Conn.php';
-    class CadastraPub extends Conn{
+
+    class Publicacao extends Conn{
         private $tableProjeto;
         
         public function __construct()
@@ -24,6 +25,18 @@ require_once '../Conection/Conn.php';
                 $sql->bindValue(":f", $id);
                 $sql->execute(); 
                 return true;
+            }
+
+            public function getPubli($id)
+            {
+                $sql = $this->pdo->prepare("SELECT * FROM $this->tableProjeto where id_projeto = :a");
+    
+                // ("SELECT * FROM cientista
+                // INNER JOIN projeto ON cientista.id_cientista")
+
+                    $sql->bindValue(":a", $id);
+                    $sql->execute(); 
+                    return true;
             }
 
         

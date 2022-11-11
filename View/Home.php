@@ -85,7 +85,7 @@
       </div>
       <div class="search-box">
         <input type="text" placeholder="Filtrar" id="searchbar">
-        <i class='bx bx-search' style="background-color: #546CB3; color: rgb(255, 255, 255);"></i>
+        <i class='bx bx-search' style="background-color: #546CB3; color: rgb(255, 255, 255);"></i></a>
       </div>
 
 
@@ -111,9 +111,9 @@
     <div class="espaco-table">
 
     </div>
-    <?php while($data = $resultData->fetch(PDO::FETCH_ASSOC)){  ?>   
-      <a href="Pub.php" class="btn-publicacao" style="text-decoration: none;">
-      <div id="resposta" class="box-resposta">
+
+    <?php while($data = $resultData->fetch(PDO::FETCH_ASSOC)){  ?>
+      <a style="text-decoration: none;" href="../Controllers/PubliController.php?id=<?= $data['id_projeto'] ?>" >
         <table border="0" class="pub">
         <tr>
           <td class="info">
@@ -129,9 +129,11 @@
           </td>
         </tr>
       </table>
-      </div>
+      </form>
     </a>
-      <?php }?>
+    </form>
+    
+  <?php }?>
 
   </section>
 
@@ -178,6 +180,13 @@
 </body>
 
 </html>
+<script>
+  
+    var el = document.getElementById('pegarID');
+      el.addEventListener('click', function(e) {
+      alert(e.target.id);
+  });
+</script>
 
 <script>
  $(document).ready(function(){

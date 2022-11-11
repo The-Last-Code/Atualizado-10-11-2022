@@ -42,7 +42,7 @@ session_destroy();
               </div>
 
               <div class="input-wrap">
-                <input name="snh_cientista" type="password" minlength="0" maxlength="10" class="input-field" required />
+                <input name="snh_cientista" type="password" minlength="0" class="input-field" required />
                 <label>Senha</label>
               </div>
 
@@ -108,12 +108,12 @@ session_destroy();
               </div>
 
               <div class="input-wrap1">
-                <input type="password" name="snh_cientista" class="input-field" required id="password" />
+                <input type="password" name="snh_cientista" class="input-field" required id="password" onchange="validatePassword()"/>
                 <label>Senha</label>
               </div>
 
               <div class="input-wrap1">
-                <input type="password" name="confirmarSenha" class="input-field" required id="confirm_password" />
+                <input type="password" name="confirmarSenha" class="input-field" required id="confirm_password"onchange="validatePassword()" />
                 <label>Confirmar Senha</label>
               </div>
 

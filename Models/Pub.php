@@ -1,5 +1,5 @@
 <?php
-include '../Dao/CadastraPub.php';
+include '../Dao/Publicacao.php';
 
 
 class Pub{
@@ -9,7 +9,7 @@ private $res_projeto;
 private $dti_projeto;
 private $dtt_projeto;
 private $pub_projeto;
-private $CadastraPubli;
+private $Publicacao;
 
 
 public function __construct($tit_projeto, $res_projeto, $dti_projeto,$dtt_projeto,$pub_projeto)
@@ -19,7 +19,7 @@ public function __construct($tit_projeto, $res_projeto, $dti_projeto,$dtt_projet
     $this->dti_projeto = $dti_projeto;
     $this->dtt_projeto = $dtt_projeto;
     $this->pub_projeto = $pub_projeto;
-    $this->CadastraPubli=new CadastraPub();
+    $this->Publicacao=new Publicacao();
 }
 
 //Metodos Set
@@ -61,7 +61,7 @@ public function getpub_projeto(){
 
 public function CadastroPub($id){
     
-    return $this->CadastraPubli->setCadastroPub($this->gettit_projeto(),$this->getres_projeto(), 
+    return $this->Publicacao->setCadastroPub($this->gettit_projeto(),$this->getres_projeto(), 
     $this->getdti_projeto(), $this->getdtt_projeto(), $this->getpub_projeto(),$id);
 }  
 }

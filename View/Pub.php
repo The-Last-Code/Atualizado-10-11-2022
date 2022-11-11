@@ -1,9 +1,11 @@
 <?php
 session_start();
+
 if (empty($_SESSION["login"])) {
   header('location: LoginCadastro.php');
   session_destroy();
 }
+$resultData = $_SESSION['pub'];
 
 ?>
 <!DOCTYPE html>
@@ -89,10 +91,8 @@ if (empty($_SESSION["login"])) {
       </div>
     </nav>
 
-    
 
-
-    <table border="0">
+    <table border="0" class="tablePub">
       <tr>
           <td class="titulo">
               <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam corporis similique consequuntur aliquam!</h3>

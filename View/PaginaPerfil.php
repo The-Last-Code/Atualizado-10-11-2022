@@ -70,9 +70,9 @@ $resultData = $_SESSION['perfil'];
 
           <div class="data">
             <h4>Telefone</h4>
-            <?php foreach ($resultData as $data) : ?>
+            <!-- <?php foreach ($resultData as $data) : ?>
               <p><?= '('.$data['ddd_telefone'].')'.' ' . $data['num_telefone'] ?></p>
-            <?php endforeach; ?>
+            <?php endforeach; ?> -->
           </div>
 
         </div>
